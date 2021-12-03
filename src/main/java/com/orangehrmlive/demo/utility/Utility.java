@@ -142,4 +142,14 @@ public class Utility extends DriverManager {
         return element;
     }
 
+    public void verifyLogoVisible(By by){
+        boolean logoPresent = driver.findElement(by).isDisplayed();
+        Assert.assertTrue(logoPresent);
+        if (!logoPresent){
+            System.out.println("Logo not Visible");
+        }else{
+            System.out.println("Logo is Visible");
+        }
+    }
+
 }
